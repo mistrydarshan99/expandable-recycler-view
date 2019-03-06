@@ -1,12 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.thoughtbot.expandablerecyclerview.sample">
+    package="com.thoughtbot.expandablerecyclerview.sample">
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
   <application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
+      android:name=".DemoApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
 
     <activity android:name="com.thoughtbot.expandablerecyclerview.sample.MainActivity">
 
@@ -18,24 +22,24 @@
     </activity>
 
     <activity
-      android:name=".expand.ExpandActivity"
-      android:parentActivityName=".MainActivity" />
+        android:name=".expand.ExpandActivity"
+        android:parentActivityName=".MainActivity" />
 
     <activity
-      android:name=".multicheck.MultiCheckActivity"
-      android:parentActivityName=".MainActivity" />
+        android:name=".multicheck.MultiCheckActivity"
+        android:parentActivityName=".MainActivity" />
 
     <activity
-      android:name=".singlecheck.SingleCheckActivity"
-      android:parentActivityName=".MainActivity" />
+        android:name=".singlecheck.SingleCheckActivity"
+        android:parentActivityName=".MainActivity" />
 
     <activity
-      android:name=".multitype.MultiTypeActivity"
-      android:parentActivityName=".MainActivity" />
+        android:name=".multitype.MultiTypeActivity"
+        android:parentActivityName=".MainActivity" />
 
     <activity
-      android:name=".multitypeandcheck.MultiTypeCheckGenreActivity"
-      android:parentActivityName=".MainActivity" />
+        android:name=".multitypeandcheck.MultiTypeCheckGenreActivity"
+        android:parentActivityName=".MainActivity" />
     <activity android:name=".custom.CustomExpandActivity" />
 
   </application>
