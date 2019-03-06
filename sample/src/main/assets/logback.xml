@@ -1,0 +1,33 @@
+<configuration debug="true">
+  <appender name="LOGCAT" class="ch.qos.logback.classic.android.LogcatAppender">
+    <tagEncoder>
+      <pattern>%logger{0}</pattern>
+    </tagEncoder>
+    <encoder>
+      <pattern>[ %thread ] %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="PAPERTRAIL" class="ch.qos.logback.classic.net.SyslogAppender">
+    <suffixPattern>logback SyslogAppender: %-5level %logger{35}: %m%n%xEx</suffixPattern>
+    <syslogHost>logs3.papertrailapp.com</syslogHost>
+    <port>50710</port>
+    <facility>USER</facility>
+
+
+    <!-- use lazy initialization so that network connection is not opened until first write -->
+    <lazy>true</lazy>
+
+
+  </appender>
+
+  <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="PAPERTRAIL" />
+  </appender>
+
+  <root level="DEBUG">
+    <appender-ref ref="ASYNC" />
+    <appender-ref ref="LOGCAT" />
+  </root>
+
+</configuration>
