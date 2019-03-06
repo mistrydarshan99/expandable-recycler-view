@@ -3,7 +3,6 @@ package com.thoughtbot.expandablerecyclerview.sample;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -23,22 +22,6 @@ public class MainActivity extends Activity {
 
     final org.slf4j.Logger log = LoggerFactory.getLogger(MainActivity.class);
     log.error("hello world dsflksadjf ---lkjdflkj ");
-
-    Log.e("", "onCreate: -------------------------------->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-    Log.e("", "onCreate: -----------------------------Demo app--->");
-
-    Log.e("This is demo", "onCreate:---------------------- ");
-    Log.e("This is demo", "onCreate:---------------------- ");
-    Log.e("This is demo", "onCreate:---------------------- ");
-    Log.e("This is demo", "onCreate:---------------------- ");
-    Log.e("This is demo", "onCreate:---------------------- ");
-    Log.e("This is demo", "onCreate:---------------------- ");
 
     FoamEvent foamEvent = new FoamEvent();
     foamEvent.track(this, "-------------------------------------------->");
